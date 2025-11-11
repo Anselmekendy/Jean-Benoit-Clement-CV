@@ -2,7 +2,7 @@
   "name": "jbc-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://anselmekendy.github.io/Jean-Benoit-Clement-CV",
+  "homepage": "https://www.jbclement.com",
   "dependencies": {
     "class-variance-authority": "^0.7.1",
     "cra-template": "1.2.0",

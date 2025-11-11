@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+</head>
+<body>
+    <h2>JBC Favicon Generator</h2>
+    <canvas id="canvas16" width="16" height="16"></canvas>
+    <canvas id="canvas32" width="32" height="32"></canvas>
+    <canvas id="canvas180" width="180" height="180"></canvas>
+    <br>
+    <button onclick="downloadFavicons()">Download Favicons</button>
+
+    <script>
+        function createFavicon(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            const radius = size * 0.15;
+            
+            // Draw rounded rectangle background
+            ctx.fillStyle = '#4169E1';
+            ctx.beginPath();
+            ctx.moveTo(radius, 0);
+            ctx.lineTo(size - radius, 0);
+            ctx.quadraticCurveTo(size, 0, size, radius);
+            ctx.lineTo(size, size - radius);
+            ctx.quadraticCurveTo(size, size, size - radius, size);
+            ctx.lineTo(radius, size);
+            ctx.quadraticCurveTo(0, size, 0, size - radius);
+            ctx.lineTo(0, radius);
+            ctx.quadraticCurveTo(0, 0, radius, 0);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Draw JBC text
+            ctx.fillStyle = '#FFD700';
+            ctx.font = `bold ${size * 0.42}px Arial, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('JBC', size / 2, size / 2 + size * 0.05);
+        }
+
+        function downloadFavicons() {
+            // Create 16x16
+            const canvas16 = document.getElementById('canvas16');
+            createFavicon(canvas16, 16);
+            const link16 = document.createElement('a');
+            link16.download = 'favicon-16x16.png';
+            link16.href = canvas16.toDataURL();
+            link16.click();
+
+            // Create 32x32
+            const canvas32 = document.getElementById('canvas32');
+            createFavicon(canvas32, 32);
+            const link32 = document.createElement('a');
+            link32.download = 'favicon-32x32.png';
+            link32.href = canvas32.toDataURL();
+            link32.click();
+
+            // Create 180x180 (Apple Touch Icon)
+            const canvas180 = document.getElementById('canvas180');
+            createFavicon(canvas180, 180);
+            const link180 = document.createElement('a');
+            link180.download = 'apple-touch-icon.png';
+            link180.href = canvas180.toDataURL();
+            link180.click();
+        }
+
+        // Auto-generate on load
+        window.onload = function() {
+            createFavicon(document.getElementById('canvas16'), 16);
+            createFavicon(document.getElementById('canvas32'), 32);
+            createFavicon(document.getElementById('canvas180'), 180);
+        };
+    </script>
+</body>
+</html>

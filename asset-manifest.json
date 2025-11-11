@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Jean-Benoit-Clement-CV/static/css/main.4b8f073a.css",
-    "main.js": "/Jean-Benoit-Clement-CV/static/js/main.8056845d.js",
-    "index.html": "/Jean-Benoit-Clement-CV/index.html",
-    "main.4b8f073a.css.map": "/Jean-Benoit-Clement-CV/static/css/main.4b8f073a.css.map",
-    "main.8056845d.js.map": "/Jean-Benoit-Clement-CV/static/js/main.8056845d.js.map"
+    "main.css": "/static/css/main.4b8f073a.css",
+    "main.js": "/static/js/main.04599788.js",
+    "index.html": "/index.html",
+    "main.4b8f073a.css.map": "/static/css/main.4b8f073a.css.map",
+    "main.04599788.js.map": "/static/js/main.04599788.js.map"
   },
   "entrypoints": [
     "static/css/main.4b8f073a.css",
-    "static/js/main.8056845d.js"
+    "static/js/main.04599788.js"
   ]
 }

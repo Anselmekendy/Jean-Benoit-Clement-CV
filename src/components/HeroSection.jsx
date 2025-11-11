@@ -53,7 +53,7 @@ export const HeroSection = () => {
               {/* Main image container */}
               <div className="relative rounded-3xl overflow-hidden shadow-strong border-4 border-white/50 max-h-[515px]">
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=700&fit=crop&crop=faces"
+                  src="/Hero-Section-Image.png"
                   alt="Jean Benoit Clément"
                   className="w-full h-full object-cover"
                 />

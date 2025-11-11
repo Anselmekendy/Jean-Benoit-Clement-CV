@@ -51,7 +51,7 @@ export const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl transform rotate-3" />
               
               {/* Main image container */}
-              <div className="relative rounded-3xl overflow-hidden shadow-strong border-4 border-white/50 max-h-[465px] sm:max-h-[450px] md:max-h-[515px]">
+              <div className="relative rounded-3xl overflow-hidden shadow-strong border-4 border-white/50 max-h-[400px] sm:max-h-[450px] md:max-h-[515px]">
                 <img
                   src="/Hero-Section-Image.png"
                   alt="Jean Benoit Clément"
